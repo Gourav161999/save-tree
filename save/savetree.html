@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        /* background: linear-gradient(green,yellow);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat; */
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/623/1023/633/desktop-full-screen-nature-pictures-1920x1200-wallpaper-preview.jpg');
+    }
+    h1{
+        color: red;
+        text-align: center;
+    }
+    H2{
+        color: darkgoldenrod;
+        text-align: center;
+
+    }
+    
+</style>
+<body>
+    <h1  > Save Trees</h1>
+    <h2 id="reason"> Here are 5 reasons for why to save trees.</h2>
+   <p style="text-align: center;"> <img id ="img1"src="https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600 " height="350px" width="450px"  alt="" class="center"></p><br>
+    <button id="next" onclick="next()"> next</button>
+    <script>
+    var imgs=[
+        'https://www.healthytrees.com/wp-content/uploads/2019/09/The-Best-Trees-to-Plant-for-Fall-Colors-400x267.jpg',
+       'https://img.texasmonthly.com/2022/04/best-trees-in-texas-the-big-tree-rockport.jpg?auto=compress&crop=faces&fit=fit&fm=webp&h=0&ixlib=php-3.3.1&q=45&w=1820',
+       'https://embarkservices.com/wp-content/uploads/2021/12/oak-tree-sunset-iStock-477164218-1-scaled-1.jpg',
+       'https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+       'https://www.arborday.org/images/thumb/thumb-flame-tree.jpg'
+    ]
+    var rsns=[
+        'Trees provide us oxygen to survive',
+        'Trees give us food and shelter',
+        'Trees are habitat for many animal species',
+        'Forests help in prevention of soil erosion',
+        'Trees are the cause of precipitation'
+    ]
+    var i=0;
+    function next(){
+        if(i>=rsns.length){
+            i=0;
+        }
+        document.getElementById('reason').innerHTML=rsns[i];
+        document.getElementById('img1').src=imgs[i];
+        i++;
+    }
+    </script>
+    
+</body>
+</html>
